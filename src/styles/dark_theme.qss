@@ -1,0 +1,290 @@
+/*
+ * Center Stage Camera - Dark Theme
+ * Premium dark theme with glassmorphism effects
+ */
+
+/* ===== Global Styles ===== */
+QWidget {
+    background-color: #0F0F14;
+    color: #E5E5E5;
+    font-family: "Segoe UI", "SF Pro Display", -apple-system, sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow {
+    background-color: #0F0F14;
+}
+
+/* ===== Custom Title Bar ===== */
+#titleBar {
+    background-color: #16161C;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+}
+
+#titleLabel {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#titleBarButton {
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #A0A0A0;
+}
+
+#titleBarButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+#closeButton:hover {
+    background-color: #EF4444;
+    color: #FFFFFF;
+}
+
+/* ===== Preview Area ===== */
+#previewContainer {
+    background-color: #0A0A0F;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Control Panel ===== */
+#controlPanel {
+    background-color: rgba(22, 22, 28, 0.95);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Section Groups ===== */
+QGroupBox#controlSection {
+    background-color: rgba(30, 30, 38, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-top: 16px;
+    padding: 16px;
+    padding-top: 32px;
+    font-weight: 600;
+}
+
+QGroupBox#controlSection::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 16px;
+    top: 8px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 0 8px;
+}
+
+/* ===== Labels ===== */
+#controlLabel {
+    color: #B0B0B0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#sliderLabel {
+    color: #B0B0B0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#sliderValue {
+    color: #6366F1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#infoLabel {
+    color: #6B7280;
+    font-size: 11px;
+    font-style: italic;
+}
+
+#statusLabel {
+    color: #A0A0A0;
+    font-size: 12px;
+}
+
+/* ===== Combo Box ===== */
+QComboBox#cameraCombo {
+    background-color: rgba(40, 40, 50, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #FFFFFF;
+    min-height: 20px;
+}
+
+QComboBox#cameraCombo:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+QComboBox#cameraCombo:focus {
+    border-color: #6366F1;
+}
+
+QComboBox#cameraCombo::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox#cameraCombo::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #A0A0A0;
+    margin-right: 8px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1E1E26;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+    selection-background-color: #6366F1;
+    selection-color: #FFFFFF;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+}
+
+/* ===== Sliders ===== */
+QSlider#styledSlider {
+    height: 24px;
+}
+
+QSlider#styledSlider::groove:horizontal {
+    height: 6px;
+    background: rgba(60, 60, 70, 0.8);
+    border-radius: 3px;
+}
+
+QSlider#styledSlider::sub-page:horizontal {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #6366F1, stop: 1 #818CF8);
+    border-radius: 3px;
+}
+
+QSlider#styledSlider::handle:horizontal {
+    background: #FFFFFF;
+    width: 18px;
+    height: 18px;
+    margin: -6px 0;
+    border-radius: 9px;
+    border: 2px solid #6366F1;
+}
+
+QSlider#styledSlider::handle:horizontal:hover {
+    background: #F0F0F0;
+    border-color: #818CF8;
+}
+
+QSlider#styledSlider::handle:horizontal:pressed {
+    background: #E0E0E0;
+}
+
+/* ===== Buttons ===== */
+QPushButton {
+    background-color: rgba(99, 102, 241, 0.9);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+QPushButton:hover {
+    background-color: rgba(129, 140, 248, 0.9);
+}
+
+QPushButton:pressed {
+    background-color: rgba(79, 82, 221, 0.9);
+}
+
+QPushButton:disabled {
+    background-color: rgba(60, 60, 70, 0.5);
+    color: #6B7280;
+}
+
+QPushButton#secondaryButton {
+    background-color: rgba(60, 60, 70, 0.8);
+    color: #E5E5E5;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: rgba(80, 80, 90, 0.8);
+}
+
+/* ===== Separator ===== */
+QFrame#separator {
+    background-color: rgba(255, 255, 255, 0.08);
+    max-height: 1px;
+    margin: 8px 0;
+}
+
+/* ===== Scroll Area ===== */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+QScrollBar:vertical {
+    background-color: transparent;
+    width: 8px;
+    margin: 4px 2px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    min-height: 40px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+    border: none;
+}
+
+/* ===== Status Bar ===== */
+#statusBar {
+    background-color: #16161C;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 6px 16px;
+}
+
+#statusBarLabel {
+    color: #8B8B8B;
+    font-size: 11px;
+}
+
+/* ===== Tooltips ===== */
+QToolTip {
+    background-color: #1E1E26;
+    color: #E5E5E5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
